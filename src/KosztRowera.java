@@ -1,11 +1,15 @@
+import java.util.Scanner;
+
 public class KosztRowera {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter to price a bike: ");
+        double priceBike = scanner.nextDouble();
+        System.out.println("Enter to apount people: ");
+        double amountPeople = scanner.nextDouble();
 
-        int cenaRowera = 1100;
-        int liczbaOsodDoZrzutki = 5;
+        double priceForOnePeople = priceBike / amountPeople;
 
-        int kwotaNaGlowke = cenaRowera / liczbaOsodDoZrzutki;
-
-        System.out.println("Każda osoba ma do zapłacenia " + kwotaNaGlowke + " zł");
+        System.out.println("The person has to pay: " + priceForOnePeople + " zł");
     }
 }
